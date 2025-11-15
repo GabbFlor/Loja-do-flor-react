@@ -5,10 +5,10 @@ import "../styles/Style.css"
 const Header = () => {
     return (
         <header>
-            <a href="index.html" className="logo">
+            <Link to="/" className="logo">
                 <img src={IconeLoja} alt="logo-loja" />
                 <h1>🌟Loja do Florindo🌟</h1>
-            </a>
+            </Link>
 
             <nav className="lista">
                 <ul>

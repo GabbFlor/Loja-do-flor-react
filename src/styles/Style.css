@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* topo da página */
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", serif;
-}
-
 body {
     /* background-color: #201627; */
     background: linear-gradient( 160deg, #461b65, #201627, #250e35);
