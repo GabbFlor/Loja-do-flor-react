@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* topo da página */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+body {
+    /* background-color: #201627; */
+    background: linear-gradient( 160deg, #461b65, #201627, #250e35);
+}
+
+header {
+    background-color: #8F5ED6;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around   ;
+    align-items: center;
+    padding: 15px 0 15px 0;
+}
+
+.logo {
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 7.5vh;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+header .lista ul {
+    list-style-type: none;
+    display: inline-flex;
+    gap: 15px;
+    font-size: 1.25vw;
+    /* melhor contraste do q o branco */
+    color: black;
+}
+
+header .lista ul a {
+    color: black;
+    text-decoration: none;
+}
+
+header .lista ul li:hover, header .lista ul a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* meio da pag */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .banner {
+    width: 100%;
+}
+
+main .banner img {
+    width: 100%;
+}
+
+.div-sobre-nos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 75vw;
+    color: white;
+}
+
+.div-sobre-nos h1, 
+.div-maps h1,
+.div-detalhes-empresa h1,
+.div-video h1,
+.div-produtos h1,
+.div-encomendas h1,
+.div-form-encomenda h1:not(.detalhes-escrita h1) {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 25px;
+    font-size: 2vw;
+    color: white;
+}
+
+.div-sobre-nos p {
+    font-size: 1.25vw;
+    text-align: center;
+}
+
+.div-maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    color: white;
+}
+
+.div-maps div iframe {
+    border-radius: 15px;
+}
+
+.div-maps div {
+    border: 3px dashed #8F5ED6;
+    border-radius: 15px;
+    padding: 5px;
+    border-image-source: linear-gradient(#8343dd, #e046be);
+    border-image-slice: 1;
+}
+
+.div-detalhes-empresa, .div-video {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 25px;
+    color: white;
+}
+
+.div-detalhes-empresa section {
+    display: inline-flex;
+    gap: 7.5vw;
+}
+
+.div-detalhes-empresa section div {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div-detalhes-empresa section div h1 {
+    font-size: 1.75vw;
+    text-align: center;
+}
+
+.div-detalhes-empresa section div p {
+    text-align: justify;
+    font-size: 1.25vw;
+}
+
+.div-video iframe {
+    border-radius: 15px;
+    border: 3px dashed;
+    padding: 5px;
+    border-image-source: linear-gradient(#8343dd, #e046be);
+    border-image-slice: 1;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #402960;
+    padding: 25px 0;
+    color: white;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer nav ul li {
+    font-size: 1vw;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li:hover {
+    text-decoration: underline;
+}
+
+footer nav ul li img {
+    height: 1vw;
+    filter: invert(1) brightness(2);
+}
+
+.logo-footer h1 {
+    font-size: 1.5vw;
+    color: white;
+}
+
+
+
+/* PÁINA DE PRODUTOS */
+.div-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 25px;
+    color: rgb(180, 180, 180);
+}
+
+.grid-produtos {
+    display: grid;
+    /* 3 colunas */
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 linhas */
+    grid-template-rows: repeat(2, 1r);
+    gap: 5vw;
+    padding: 25px;
+}
+
+.img-produto-temp {
+    background-color: white;
+    height: 15vw;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.produto {
+    border-radius: 15px;
+    border: 3px dashed;
+    padding: 15px;
+    border-image-source: linear-gradient(#8343dd, #e046be);
+    border-image-slice: 1;
+    color: white;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.produto h2, .pop-up h2 {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.produto h2:hover, .produto span:hover, .pop-up h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.produto p, .produto span, .pop-up p {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.produto span {
+    color: lime;
+}
+
+.btn-saiba-mais {
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    font-size: 1vw;
+    outline: none;
+    background-color: transparent;
+    border: 1.5px solid rgb(0, 247, 255);
+    color: rgb(0, 247, 255);
+    border-radius: 5px;
+    margin: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    cursor: pointer;
+    background-color: rgb(0, 247, 255);
+    color: black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.pop-up {
+    position: fixed;
+    border-radius: 15px;
+    border: 3px dashed;
+    padding: 15px;
+    padding-top: 40px;
+    border-image-source: linear-gradient(#8343dd, #e046be);
+    border-image-slice: 1;
+    color: white;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.pop-up img {
+    background-color: white;
+    height: 20vw;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.hidden-element {
+    display: none !important;
+}
+
+.btn-close-pop-up {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-close-pop-up img {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 1.75vw;
+    color: white;
+    filter: invert(1) brightness(2);
+}
+
+/* PAG DE CONTATO */
+
+.main-contato {
+    /* calcula o tamanho subtraindo o header e o footer (arrumar na responsividade) */
+    height: calc(100vh - 113.35px - 153.35px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.main-contato section:not(.agradecimento) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 27.5%;
+}
+
+.main-contato section h1, .agradecimento h1 {
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+.agradecimento h1 {
+    text-align: center;
+}
+
+.contato-form, 
+.div-form-encomenda form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #341659;
+    padding: 25px;
+    border-radius: 7.5px;
+}
+
+.contato-form div:not(.div-buttons-form),
+.div-form-encomenda form div:not(.div-buttons-form-encomenda) {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+}
+
+.contato-form div label, 
+.agradecimento p,
+.div-form-encomenda p {
+    font-size: 1.15vw;
+}
+
+.contato-form input, 
+.contato-form textarea,
+.div-form-encomenda input,
+.div-form-encomenda textarea,
+.div-form-encomenda select {
+    height: 25px;
+    font-size: 1vw;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px;
+    background-color: #452079;
+    color: white;
+    border: 1px solid #7D3CCF;
+    transition: all 0.2s ease-in-out;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus,
+.div-form-encomenda input:focus,
+.div-form-encomenda textarea:focus,
+.div-form-encomenda select:focus {
+  outline: none;
+  border: 1px solid #AA6CFF;
+  box-shadow: 0 0 5px #AA6CFF;
+  transition: all 0.2s ease-in-out;
+}
+
+.contato-form textarea,
+.div-form-encomenda textarea {
+    height: 80px !important;
+    resize: none;
+}
+
+.div-buttons-form,
+.div-buttons-form-encomenda {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.contato-form button, 
+.contato-form a,
+.div-buttons-form-encomenda button {
+    width: fit-content;
+    padding: 7.5px 15px 7.5px 15px !important;
+    font-size: 1vw;
+    background-color: #4E2683;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.contato-form button:hover , 
+.contato-form a:hover,
+.div-buttons-form-encomenda button:hover {
+    outline: none;
+    border: 1px solid #AA6CFF;
+    box-shadow: 0 0 5px #AA6CFF;
+    transition: all 0.2s ease-in-out;
+}
+
+.agradecimento {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 85%;
+}
+
+.agradecimento p {
+    text-align: center;
+}
+
+.div-table table {
+    /* border: 1px solid white; */
+    color: white;
+}
+
+.div-table th, .div-table td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Pag encomendas (OS ESTILOS PADRÕES ESTÃO JUNTOS COM O STYLE DOFORM DE CONTATO) */
+.div-form-encomenda {
+    margin-top: 20px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+}
+
+.div-form-encomenda select {
+    height: 40px;
+}
+
+.div-form-encomenda p {
+    color: white;
+}
+
+.div-form-encomenda input::placeholder,
+.div-form-encomenda textarea::placeholder {
+    color: rgb(202, 202, 202);
+}
+
+/* classe para o js (pag encomendas) */
+.valor-invalido {
+    color: red;
+}
+
+/* responsividade para tablet */
+@media (max-width: 800px) {
+    header .lista ul {
+        font-size: 2vw;
+    }
+
+    .div-sobre-nos h1, 
+    .div-maps h1,
+    .div-detalhes-empresa h1,
+    .div-video h1,
+    .main-contato section h1,
+    .agradecimento h1,
+    .div-produtos h1:not(.detalhes-escrita h1) {
+        text-align: center;
+        font-weight: 400;
+        margin-top: 25px;
+        font-size: 3.5vw;
+        color: white;
+    }
+
+    .map-responsivo {
+        width: 75vw;
+        height: 500px;
+    }
+
+    .div-sobre-nos p, .div-detalhes-empresa section div p {
+        font-size: 2.5vw;
+        line-height: 25px;
+    }
+
+    .div-sobre-nos p {
+        text-align: justify;
+    }
+
+    .div-detalhes-empresa section {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vw;
+    }
+
+    .div-detalhes-empresa section div {
+        width: 75vw;
+    }
+
+    .div-detalhes-empresa section div h1 {
+        font-size: 2.75vw;
+    }
+
+    footer nav ul li {
+        font-size: 2vw;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    footer nav ul li img {
+        height: 2vw;
+    }
+
+    .produto p, .produto span, .pop-up p {
+        font-size: 1.5vw;
+        text-align: center;
+    }
+
+    .btn-saiba-mais {
+        font-size: 1.5vw;
+    }
+
+    .pop-up {
+        width: 35vw;
+    }
+
+    .pop-up img {
+        height: 25vw;
+    }
+
+    .btn-close-pop-up {
+        top: 2%;
+        right: 2%;
+    }
+
+    .btn-close-pop-up img {
+        height: 2.5vw;
+    }
+
+    .main-contato section:not(.agradecimento) {
+        gap: 25px;
+        width: 50%;
+    }
+
+    .contato-form div label, .agradecimento p {
+        font-size: 1.75vw;
+    }
+
+    .contato-form input, .contato-form textarea {
+        height: 25px;
+        font-size: 1.75vw;
+    }
+
+    .contato-form textarea {
+        height: 80px !important;
+    }
+
+    .contato-form button, .contato-form a {
+        padding: 5px 15px 5px 15px;
+        font-size: 1.75vw;
+    }
+}
+
+/* responsividade para mobile */
+@media (max-width: 500px) {
+    .logo img {
+        height: 5vh;
+    }
+
+    header h1 {
+        font-size: 10px;
+    }
+
+    header .lista ul {
+        font-size: 4vw;
+    }
+
+    .div-sobre-nos h1, 
+    .div-maps h1,
+    .div-detalhes-empresa h1,
+    .div-video h1,
+    .div-produtos h1,
+    .main-contato section h1,
+    .agradecimento h1:not(.detalhes-escrita h1) {
+        font-size: 4.5vw;
+    }
+
+    .div-sobre-nos p, .div-detalhes-empresa section div p, .produto p, .produto span, .pop-up p {
+        font-size: 3vw;
+        line-height: 20px;
+    }
+
+    .btn-saiba-mais {
+        font-size: 3vw;
+    }
+
+    .map-responsivo {
+        width: 75vw;
+        height: 250px;
+    }
+
+    .produto h2, .pop-up h2 {
+        font-size: 3.5vw;
+    }
+
+    .grid-produtos {
+        display: grid;
+        /* 3 colunas */
+        grid-template-columns: repeat(1, 1fr);
+        /* 2 linhas */
+        grid-template-rows: repeat(6, 1r);
+        gap: 5vw;
+        padding: 25px;
+    }
+
+    .produto {
+        border-radius: 15px;
+        border: 3px dashed;
+        padding: 15px;
+        border-image-source: linear-gradient(#8343dd, #e046be);
+        border-image-slice: 1;
+        color: white;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .img-produto-temp {
+        background-color: white;
+        height: 50vw;
+        width: 100%;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .pop-up {
+        width: 55vw;
+    }
+
+    .pop-up img {
+        height: 45vw;
+    }
+
+    .btn-close-pop-up {
+        top: 2%;
+        right: 2%;
+    }
+
+    .btn-close-pop-up img {
+        height: 4.5vw;
+    }
+
+    .main-contato section:not(.agradecimento) {
+        gap: 25px;
+        width: 80%;
+    }
+
+    .contato-form div label, .agradecimento p {
+        font-size: 3vw;
+    }
+
+    .contato-form input, .contato-form textarea {
+        height: 25px;
+        font-size: 3vw;
+    }
+
+    .contato-form textarea {
+        height: 80px !important;
+    }
+
+    .contato-form button, .contato-form a {
+        padding: 5px 15px 5px 15px;
+        font-size: 3vw;
+    }
+}

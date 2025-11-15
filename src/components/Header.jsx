@@ -1,15 +1,15 @@
 import IconeLoja from '../assets/icone-loja.png';
-import "../styles/HeaderStyle.css"
+import "../styles/Style.css"
 
 const Header = () => {
     return (
         <header>
-            <a href="index.html" class="logo">
+            <a href="index.html" className="logo">
                 <img src={IconeLoja} alt="logo-loja" />
                 <h1>🌟Loja do Florindo🌟</h1>
             </a>
 
-            <nav class="lista">
+            <nav className="lista">
                 <ul>
                     <a href="index.html">Home</a>
                     <a href="produtos.html">Produtos</a>

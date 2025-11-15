@@ -3,12 +3,12 @@ import FacebookIcon from "../assets/facebook.svg";
 import InstagramIcon from "../assets/instagram.svg";
 import TwitterIcon from "../assets/twitter-x.svg";
 import GithubIcon from "../assets/github.svg";
-import "../styles/FooterStyle.css";
+import "../styles/Style.css";
 
 const Footer = () => {
     return (
         <footer>
-            <div class="logo logo-footer">
+            <div className="logo logo-footer">
                 <img src={IconeLojaWhite} alt="logo-loja" />
                 <h1>🌟Loja do Florindo🌟</h1>
             </div>

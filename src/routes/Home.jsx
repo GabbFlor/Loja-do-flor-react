@@ -1,5 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import BannerTop from "../assets/banner-top.png";
+import "../styles/Style.css";
 
 const Home = () => {
     return (
@@ -7,7 +9,68 @@ const Home = () => {
             <Header />
 
             <main>
-                <h1>Conteúdo da pag principal</h1>
+                <div className="banner">
+                    <img src={BannerTop} alt="placa-de-video" />
+                </div>
+
+
+                <section className="div-sobre-nos">
+                    <h1>🌟 Sobre nós 🌟</h1>
+
+                    <p>
+                        A Loja do Florindo nasceu da paixão por tecnologia e computadores. 
+                        Tudo começou com um simples hobby: montar PCs para amigos e familiares. 
+                        Com o tempo, percebemos que muitas pessoas tinham dificuldade para encontrar 
+                        peças de qualidade e boas recomendações para montar ou melhorar seus computadores.
+                        Foi assim que decidimos criar a Loja do Florindo, um lugar onde qualquer pessoa 
+                        – seja um gamer, um programador ou alguém que só quer um PC mais rápido – pode 
+                        encontrar os melhores componentes por preços justos.
+                        Nosso objetivo sempre foi oferecer produtos confiáveis e um atendimento próximo, 
+                        ajudando cada cliente a escolher exatamente o que precisa. Se você quer dar um upgrade 
+                        no seu setup, pode contar com a gente! 🚀
+                    </p>
+                </section>
+
+                <section className="div-maps">
+                    <h1>📌 Onde estamos? 📌</h1>
+
+                    <div>
+                        <iframe className="map-responsivo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.7218385910126!2d-46.558765122299114!3d-23.64420483451637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4328ea92757b%3A0xccca50dd4902033b!2sR.%20Santo%20Andr%C3%A9%2C%20680%20-%20Boa%20Vista%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009572-000!5e0!3m2!1spt-BR!2sbr!4v1740013772465!5m2!1spt-BR!2sbr" width="600" height="500" style={{border: 0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+
+                <section className="div-detalhes-empresa">
+                    <h1>❓ Detalhes da empresa ❓</h1>
+
+                    <section>
+                        <div className="detalhes-escrita">
+                            <h1>Serviços oferecidos</h1>
+                            <p>
+                                Na Loja do Florindo, oferecemos consultoria personalizada para montar ou melhorar seu setup. Ajudamos você a escolher as melhores peças conforme sua necessidade e orçamento. Também realizamos manutenção preventiva e corretiva, montagem de computadores e orientações sobre upgrades. Seu PC do jeito que você sempre quis!
+                            </p>
+                        </div>
+
+                        <div className="detalhes-escrita">
+                            <h1>Produtos disponíveis</h1>
+                            <p>
+                                Trabalhamos com uma variedade de peças e acessórios para computadores: placas-mãe, processadores, memórias RAM, SSDs, fontes, gabinetes, periféricos e muito mais. Todos os nossos produtos são testados, originais e com garantia. Se precisar de algo específico, podemos ajudar você a encontrar e encomendar com toda segurança.
+                            </p>
+                        </div>
+
+                        <div className="detalhes-escrita">
+                            <h1>Suporte ao cliente</h1>
+                            <p>
+                                Prezamos por um atendimento próximo e eficiente. Caso tenha dúvidas na escolha de peças ou precise de suporte técnico, conte com a gente! Atendemos por e-mail, redes sociais e WhatsApp, sempre com agilidade e clareza. Nosso objetivo é garantir que você fique satisfeito e tenha uma ótima experiência com a Loja do Florindo.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+
+                <section className="div-video">
+                    <h1>📼 Vídeo sobre a empresa 📼</h1>
+
+                    <iframe className="map-responsivo" width="600" height="500" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=kBMeyPQAZVjeOwk3" title="YouTube video player" frameBorder="0" allow="autoplay; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </section>
             </main>
 
             <Footer />
