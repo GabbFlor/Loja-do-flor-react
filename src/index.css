@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* 
+        aqui vou colocar todas as variáveis de tamanho e de cor
+        para facilitar na responsividade e na função de colocar
+        um novo tema (talvez)
+    */
+
+    /* header */
+    --background-color-header: #8F5ED6;
+    --color-logo: #000;
+    --default-color-font-header: #000;
+    --logo-height: 7.5vh;
+    --font-size-header-h1: 1.05vw;
+    --font-size-header-ul: 1.25vw;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
