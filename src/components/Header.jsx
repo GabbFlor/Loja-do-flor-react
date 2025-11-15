@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import IconeLoja from '../assets/icone-loja.png';
 import "../styles/Style.css"
 
@@ -11,10 +12,10 @@ const Header = () => {
 
             <nav className="lista">
                 <ul>
-                    <a href="index.html">Home</a>
-                    <a href="produtos.html">Produtos</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="encomendas.html">Encomendas</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/produtos">Produtos</Link>
+                    <Link to="/contato">Contato</Link>
+                    <Link to="/encomendas">Encomendas</Link>
                 </ul>
             </nav>
         </header>

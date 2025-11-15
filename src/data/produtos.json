@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "imgPath": "../assets/produto-1.jpg",
+        "title": "Placa de vídeo RTX 4080 Super",
+        "text": "Potência máxima para games em 4K e criação de conteúdo avançada. Ray Tracing e DLSS 3 para gráficos realistas e alto desempenho."
+    },
+    {
+        "id": 2,
+        "imgPath": "../assets/produto-2.jpg",
+        "title": "Processador Intel Core i9 14900K",
+        "text": "Desempenho extremo com 24 núcleos e frequência turbo de até 6.0GHz. Ideal para jogos e tarefas pesadas com máxima eficiência."
+    },
+    {
+        "id": 3,
+        "imgPath": "../assets/produto-3.jpg",
+        "title": "Teclado Mecânico Redragon Kumara RGB",
+        "text": "Compacto e resistente, com switches Outemu e iluminação RGB personalizável. Ideal para precisão em jogos e durabilidade no uso diário."
+    },
+    {
+        "id": 4,
+        "imgPath": "../assets/produto-4.jpeg",
+        "title": "Controle Gamer 8BitDo Ultimate 2.4G Wireless",
+        "text": "Controle sem fio com analógicos Hall Effect, botões traseiros programáveis e base de carregamento. Compatível com PC, Switch e dispositivos móveis."
+    },
+    {
+        "id": 5,
+        "imgPath": "../assets/produto-5.jpeg",
+        "title": "Headset Gamer HyperX Cloud Stinger",
+        "text": "Leve e confortável, com drivers de 50mm e microfone com cancelamento de ruído. Ideal para longas sessões de jogo com áudio imersivo."
+    },
+    {
+        "id": 6,
+        "imgPath": "../assets/produto-6.jpeg",
+        "title": "Mouse Gamer Redragon M686 Vampire Elite",
+        "text": "Mouse sem fio com sensor de 16.000 DPI, iluminação RGB e 8 botões programáveis. Ideal para precisão e personalização em jogos competitivos."
+    }
+]
