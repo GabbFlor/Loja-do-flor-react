@@ -508,6 +508,39 @@ footer nav ul li img {
     color: red;
 }
 
+#input-pesquisa {
+    height: 20px;
+    width: 8.5vw;
+    font-size: 0.75vw;
+    outline: none;
+    background-color: transparent;
+    border: 1.5px solid white;
+    border-radius: 2.5px;
+    margin-left: 2px;
+    padding: 5px;
+    color: white;
+}
+
+#input-pesquisa::placeholder {
+    color: white;
+}
+
+.btnDeletar {
+    background-color: transparent;
+    color: red;
+    border: 1.5px solid red;
+    padding: 5px;
+    border-radius: 2.5px;
+    font-size: 0.75vw;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btnDeletar:hover {
+    cursor: pointer;
+    background-color: red;
+    color: black;
+}
+
 /* responsividade para tablet */
 @media (max-width: 800px) {
     header .lista ul {

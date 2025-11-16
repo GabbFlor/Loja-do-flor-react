@@ -23,30 +23,6 @@
       "espec": "Placa mãe com o soquete LGA1700, perfeito para portar o I9 13900k",
       "valorUn": 2500,
       "qtd": 1
-    },
-    {
-      "id": "75f6",
-      "nome": "RTX 5080",
-      "tipo": "Placa de vídeo",
-      "espec": "TESTE.",
-      "valorUn": 15000,
-      "qtd": 4
-    },
-    {
-      "id": "df71",
-      "nome": "RTX 3080",
-      "tipo": "Placa de vídeo",
-      "espec": "TESTE.",
-      "valorUn": 15000,
-      "qtd": 4
-    },
-    {
-      "id": "ead6",
-      "nome": "Ryzen 3 2200g",
-      "tipo": "Processador",
-      "espec": "Processador de geração antiga (de entrada).",
-      "valorUn": "500",
-      "qtd": "50"
     }
   ]
 }

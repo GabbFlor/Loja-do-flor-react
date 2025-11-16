@@ -53,9 +53,43 @@ const Encomendas = () => {
         })
     }
 
+    const deletarEncomenda = (id) => {
+        const deleteConfirmado = confirm("Você tem certeza que deseja deletar essa encomenda?")
+
+        if (deleteConfirmado) {
+            axios.delete(`http://localhost:3000/encomendas/${id}`)
+            .then((response) => {
+                getContentTable();
+            })
+            .catch((error) => {
+                alert("Erro ao deletar o item, veja o console.")
+                console.error(`Erro: ${error}`)
+            })
+        }
+    }
+
     useEffect(() => {
         getContentTable();
     }, [])
+
+    const itensFiltrados = formContent ? formContent.filter(item => {
+        const termoPesquisa = pesquisa.toLowerCase();
+        
+        // verifica se o termo de pesquisa está incluso em algum item q esteja na lista
+        // se a pesquisa não estiver nada, então ele simplesmente retorna a lista completa
+            return (
+                item.nome.toLowerCase().includes(termoPesquisa) ||
+                item.tipo.toLowerCase().includes(termoPesquisa) ||
+                item.espec.toLowerCase().includes(termoPesquisa)
+            );
+        })
+    : [];
+
+    const formatadorDeMoeda = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+
 
     return (
         <div>
@@ -70,6 +104,7 @@ const Encomendas = () => {
                     <input 
                         type="text" 
                         id="input-pesquisa" 
+                        placeholder="Digite sua pesquisa..."
                         value={pesquisa}
                         onChange={(e) => setPesquisa(e.target.value)}
                     />
@@ -83,22 +118,27 @@ const Encomendas = () => {
                                 <th>Valor un.</th>
                                 <th>Quantidade</th>
                                 <th>Total</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
 
                         <tbody id="table">
-                            {formContent != null ? (
-                                formContent.map(item => (
-                                    <tr key={item.id}>
-                                        <td>{item.nome}</td>
-                                        <td>{item.tipo}</td>
-                                        <td>{item.espec}</td>
-                                        <td>{item.valorUn}</td>
-                                        <td>{item.qtd}</td>
-                                        <td>{new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL',}).format(item.qtd * item.valorUn)}</td>
-                                    </tr>
-                                ))
-                            ) : (<tr/>)}
+                            {itensFiltrados.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.nome}</td>
+                                    <td>{item.tipo}</td>
+                                    <td>{item.espec}</td>
+                                    <td>{item.valorUn}</td>
+                                    <td>{item.qtd}</td>
+                                    <td>{formatadorDeMoeda.format(item.qtd * item.valorUn)}</td>
+                                    <td>
+                                        <button 
+                                            className="btnDeletar"
+                                            onClick={() => deletarEncomenda(item.id)}
+                                        >Deletar</button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </section>
