@@ -541,6 +541,29 @@ footer nav ul li img {
     color: black;
 }
 
+/* pagina de erro */
+.errorPage {
+    width: 100dvw;
+    height: 100dvh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorPage h1 {
+    font-size: 3vw;
+}
+
+.errorPage h2 {
+    font-size: 2vw;
+}
+
+.errorPage a {
+    color: #7D3CCF;
+}
+
 /* responsividade para tablet */
 @media (max-width: 800px) {
     header .lista ul {

@@ -7,12 +7,13 @@ import Home from './routes/Home.jsx'
 import Produtos from './routes/Produtos.jsx'
 import Contato from './routes/Contato.jsx'
 import Encomendas from './routes/Encomendas.jsx'
+import ErrorPage from './routes/ErrorPage.jsx'
 
 const routes = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // element error
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
