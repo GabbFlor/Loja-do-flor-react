@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import axios from "axios";
 
 const Encomendas = () => {
     const [ pesquisa, setPesquisa ] = useState("");
@@ -9,12 +10,26 @@ const Encomendas = () => {
     const [ especificacao, setEspecificacao ] = useState("");
     const [ valorUn, setValorUn ] = useState("");
     const [ qtd, setQtd ] = useState("");
-    const [ formTotal, setFormTotal ] = useState(0);
+    const [ formContent, setFormContent ] = useState(null);
 
     const handleSubmitEncomenda = (e) => {
         e.preventDefault();
 
-        // enviar para a API
+        axios.post("http://localhost:3000/encomendas", {
+            nome: nome,
+            tipo: tipo,
+            espec: especificacao,
+            valorUn: valorUn,
+            qtd: qtd,
+        })
+        .then((response) => {
+            console.log("Funfou");
+            getContentTable();
+        })
+        .catch((error) => {
+            alert("Erro ao adicionar encomenda, olhe o console.")
+            console.error(`Erro: ${error}`)
+        })
 
         limparForm();
     }
@@ -26,6 +41,21 @@ const Encomendas = () => {
         setValorUn("");
         setQtd("");
     }
+
+    const getContentTable = () => {
+        axios.get("http://localhost:3000/encomendas")
+        .then((response) => {
+            setFormContent(response.data);
+        })
+        .catch((error) => {
+            alert("Erro ao recuperar os dados da API, olhar o console...");
+            console.error(`Erro: ${error}`);
+        })
+    }
+
+    useEffect(() => {
+        getContentTable();
+    }, [])
 
     return (
         <div>
@@ -57,7 +87,18 @@ const Encomendas = () => {
                         </thead>
 
                         <tbody id="table">
-                            
+                            {formContent != null ? (
+                                formContent.map(item => (
+                                    <tr key={item.id}>
+                                        <td>{item.nome}</td>
+                                        <td>{item.tipo}</td>
+                                        <td>{item.espec}</td>
+                                        <td>{item.valorUn}</td>
+                                        <td>{item.qtd}</td>
+                                        <td>{new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL',}).format(item.qtd * item.valorUn)}</td>
+                                    </tr>
+                                ))
+                            ) : (<tr/>)}
                         </tbody>
                     </table>
                 </section>
